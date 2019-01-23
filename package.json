@@ -1,0 +1,26 @@
+{
+  "name": "node-deepspeech",
+  "version": "0.0.1",
+  "private": false,
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bogglian/node-DeepSpeech.git"
+  },
+  "keywords": [
+    "node",
+    "deepspeech",
+    "stt",
+    "speech-to-text"
+  ],
+  "author": "rayko <gmj1197@gmail.com> (https://bogglian.github.io/react-DeepSpeech/)",
+  "license": "MPL-2.0",
+  "bugs": {
+    "url": "https://github.com/Bogglian/node-DeepSpeech/issues"
+  },
+  "homepage": "https://github.com/Bogglian/node-DeepSpeech#readme"
+}
