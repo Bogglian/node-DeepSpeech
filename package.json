@@ -1,11 +1,12 @@
 {
   "name": "node-deepspeech",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "private": false,
-  "description": "",
+  "description": "node package using the mozilla deepspeech",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "start": "node index.js",
+    "test": "node test.js"
   },
   "repository": {
     "type": "git",
