@@ -7,7 +7,7 @@ const MemoryStream = require("memory-stream");
 const Wav = require("node-wav");
 const { Duplex } = require("stream");
 
-module.exports = (filePath => {
+module.exports = filePath => {
   const AUDIO = filePath || "./audio/4507-16021-0012.wav";
 
   const modelsPath = process.env.DEEPSPEECH_MODEL_PATH || "./models";
@@ -117,4 +117,4 @@ module.exports = (filePath => {
       audioLength.toPrecision(4)
     );
   });
-})();
+};
