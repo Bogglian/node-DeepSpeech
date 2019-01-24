@@ -1,12 +1,12 @@
 {
   "name": "node-deepspeech",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": false,
   "description": "node package using the mozilla deepspeech",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "post install": "node postinstall.js"
+    "streaming-demo": "node streaming-demo",
+    "postinstall": "node postinstall.js"
   },
   "repository": {
     "type": "git",
@@ -26,6 +26,11 @@
   "homepage": "https://github.com/teamthesol/node-DeepSpeech#readme",
   "dependencies": {
     "deepspeech": "^0.4.1",
-    "sox-stream": "^2.0.3"
+    "express": "^4.16.4",
+    "express-static": "^1.2.6",
+    "socket.io": "^2.2.0",
+    "socket.io-stream": "^0.9.1",
+    "sox-stream": "^2.0.3",
+    "webrtc-adapter": "^7.2.0"
   }
 }

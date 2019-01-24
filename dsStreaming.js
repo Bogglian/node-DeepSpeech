@@ -33,6 +33,10 @@ module.exports = emitter => {
   // Size of the context window used for producing timesteps in the input vector
   const N_CONTEXT = 9;
 
+  function totalTime(hrtimeValue) {
+    return (hrtimeValue[0] + hrtimeValue[1] / 1000000000).toPrecision(4);
+  }
+
   console.log("Loading model from file %s", MODEL);
   const modelLoadStart = process.hrtime();
   const model = new DeepSpeech.Model(
