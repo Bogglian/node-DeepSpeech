@@ -3,6 +3,7 @@
 const Sox = require("sox-stream");
 const DeepSpeech = require("deepspeech");
 const MemoryStream = require("memory-stream");
+require("dotenv").config();
 
 module.exports = emitter => {
   const modelsPath = process.env.DEEPSPEECH_MODEL_PATH || "./models";

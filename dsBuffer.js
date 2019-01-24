@@ -1,11 +1,11 @@
 #!/usr/bin/env node
 
-const Fs = require("fs");
 const Sox = require("sox-stream");
 const DeepSpeech = require("deepspeech");
 const MemoryStream = require("memory-stream");
 const Wav = require("node-wav");
 const { Duplex } = require("stream");
+require("dotenv").config();
 
 module.exports = aduioBuffer => {
   const modelsPath = process.env.DEEPSPEECH_MODEL_PATH || "./models";

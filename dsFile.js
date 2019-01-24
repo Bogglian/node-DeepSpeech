@@ -1,11 +1,11 @@
 #!/usr/bin/env node
-
 const Fs = require("fs");
 const Sox = require("sox-stream");
 const DeepSpeech = require("deepspeech");
 const MemoryStream = require("memory-stream");
 const Wav = require("node-wav");
 const { Duplex } = require("stream");
+require("dotenv").config();
 
 module.exports = filePath => {
   const AUDIO = filePath || "./audio/4507-16021-0012.wav";
