@@ -25,9 +25,23 @@ No one made a valid repository for DeepSpeech and we made it our own.
 [mozila deepspeech](https://github.com/mozilla/DeepSpeech)(MPL 2.0)
 [node](https://github.com/nodejs/node)(MIT)
 
+## Env
+
+| title                 | description                   |
+| :-------------------- | :---------------------------- |
+| DEEPSPEECH_MODEL_PATH | your deepspeech 'models' path |
+
+## Function
+
+| title       | description                                       |
+| :---------- | :------------------------------------------------ |
+| dsBuffer    | Mozilla/Deepspeech function using the buffer data |
+| dsFile      | Mozilla/Deepspeech function using the file path   |
+| dsStreaming | Mozilla/Deepspeech function using the microphone. |
+
 ## How can I contribute to this project?
 
-First, read the [our contribution guideline](CONTRIBUTING.md). if you have read it, you can contribute to our project by creating [issues](https://github.com/Bogglian/node-DeepSpeech/issues) or contribute to it in [pull requests](https://github.com/Bogglian/node-DeepSpeech/pulls).
+First, read the [our contribution guideline](CONTRIBUTING.md). if you have read it, you can contribute to our project by creating [issues](https://github.com/teamthesol/node-DeepSpeech/issues) or contribute to it in [pull requests](https://github.com/teamthesol/node-DeepSpeech/pulls).
 
 ## License
 
