@@ -1,9 +1,9 @@
 const EventEmitter = require("events");
 const streamServer = require("./sample_streaming");
 
-import dsb from "./dsBuffer";
-import dsf from "./dsFile";
-import dss from "./dsStreaming";
+const dsb = require("./dsBuffer");
+const dsf = require("./dsFile");
+const dss = require("./dsStreaming");
 
 function dsBuffer(buffer) {
   if (!buffer) return 1;
