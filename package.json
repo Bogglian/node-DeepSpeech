@@ -1,6 +1,6 @@
 {
   "name": "node-deepspeech",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "private": false,
   "description": "node package using the mozilla deepspeech",
   "main": "index.js",
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Bogglian/node-DeepSpeech.git"
+    "url": "git+https://github.com/teamthesol/node-DeepSpeech.git"
   },
   "keywords": [
     "node",
@@ -19,12 +19,12 @@
     "stt",
     "speech-to-text"
   ],
-  "author": "rayko <gmj1197@gmail.com> (https://bogglian.github.io/react-DeepSpeech/)",
+  "author": "rayko <gmj1197@gmail.com>",
   "license": "MPL-2.0",
   "bugs": {
-    "url": "https://github.com/Bogglian/node-DeepSpeech/issues"
+    "url": "https://github.com/teamthesol/node-DeepSpeech/issues"
   },
-  "homepage": "https://github.com/Bogglian/node-DeepSpeech#readme",
+  "homepage": "https://github.com/teamthesol/node-DeepSpeech#readme",
   "dependencies": {
     "deepspeech": "^0.4.1",
     "sox-stream": "^2.0.3"
