@@ -1,14 +1,12 @@
-let Recorder = function(source) {
+const Recorder = function(source) {
   const bufferLen = 4096;
   let recording = false;
   let currCallback = null;
 
   this.context = source.context;
-  if (!this.context.createScriptProcessor) {
-    this.node = this.context.createJavaScriptNode(bufferLen, 2, 2);
-  } else {
-    this.node = this.context.createScriptProcessor(bufferLen, 2, 2);
-  }
+  this.context.createScriptProcessor
+    ? (this.node = this.context.createScriptProcessor(bufferLen, 2, 2))
+    : (this.node = this.context.createJavaScriptNode(bufferLen, 2, 2));
 
   const worker = new Worker("./recorderWorker.js");
   worker.postMessage({
@@ -19,10 +17,13 @@ let Recorder = function(source) {
   this.record = () => {
     recording = true;
   };
+
   this.stop = () => {
     recording = false;
   };
+
   this.clear = () => worker.postMessage({ command: "clear" });
+
   this.getBuffers = cb => {
     currCallback = cb;
     worker.postMessage({ command: "getBuffers" });
@@ -42,7 +43,9 @@ let Recorder = function(source) {
   };
 
   worker.onmessage = e => currCallback(e.data);
+
   source.connect(this.node);
+
   this.node.connect(this.context.destination);
 };
 
