@@ -10,34 +10,96 @@ It started in Jan 23, 2019
 
 this is component using node and morzilla/DeepSpeech.
 
-## :sweat: Sorry for users
-
-> this is not yet built the publish version.
-
 ## 💡 Motivation
 
-No one made a valid repository for DeepSpeech and we made it our own.
+No one made a valid repository for DeepSpeech and we made it.
 
 ## 🏃‍♀️🏃‍♂️QuickStart
+
+1-1. If you want use in your project
+
+```bash
+$ yarn add node-deepspeech
+// OR
+$ npm install node-deepspeech
+```
+
+1-2. If you want use in local
+
+```bash
+// use HTTPS
+$ git clone https://github.com/teamthesol/node-DeepSpeech.git
+// Or use SSH
+$ git clone git@github.com:teamthesol/node-DeepSpeech.git
+```
+
+2-1. if you have training models of deepspeech
+
+Modify your training models directory name to 'models'. follow:
+
+```
+$ mv [your models name] [models name to be changed]
+```
+
+2-2 if you don't have training models of deepspeech, prepare files to be used in advance. follow:
+
+```
+$ npm run pre
+```
+
+3. edit .env file follw:
+
+```md
+Modify file name `.emv.sample's` to `.env`. this is use 'dotenv'.
+
+Edit environment value 'DEEPSPEECH_MODEL_PATH' in `.env`. this is your 'models' path. 'models' is your trainint models. if you run `npm run pre`, edit like 'DEEPSPEECH_MODEL_PATH="./models'(this is only use in node-deepspeech).
+
+but, if you don't want use 'dotenv', run `export DEEPSPEECH_MODEL_PATH="./your/models/path"` in terminal(bash, zsh, fish, etc).
+```
+
+4-1. If you want use in your project
+
+write your project. Now the preparations that we can do are over!
+
+4-2. If you want use in local
+
+```bash
+// run file-demo // or yarn file-demo
+$ npm run file-demo
+// run streaming-demo
+$ npm run streaing demo // or yarn streaming-demo
+```
 
 ## 🔧 Used Opensources
 
 [mozila deepspeech](https://github.com/mozilla/DeepSpeech)(MPL 2.0)
 [node](https://github.com/nodejs/node)(MIT)
 
-## Env
+## Script
 
-| title                 | description                   |
-| :-------------------- | :---------------------------- |
-| DEEPSPEECH_MODEL_PATH | your deepspeech 'models' path |
+| Title          | Description                                             |
+| :------------- | :------------------------------------------------------ |
+| file-demo      | runnung demo using the file path.                       |
+| streaming-demo | running demo using the microphone.                      |
+| pre            | install pre-information(audio sample, training models). |
+
+## Development Environments
+
+| Title                 | Description                   | Default  |
+| :-------------------- | :---------------------------- | -------- |
+| DEEPSPEECH_MODEL_PATH | your deepspeech 'models' path | ./models |
 
 ## Function
 
-| title       | description                                       |
-| :---------- | :------------------------------------------------ |
-| dsBuffer    | Mozilla/Deepspeech function using the buffer data |
-| dsFile      | Mozilla/Deepspeech function using the file path   |
-| dsStreaming | Mozilla/Deepspeech function using the microphone. |
+| Title       | Description                                        | Input                          |
+| :---------- | :------------------------------------------------- | ------------------------------ |
+| dsBuffer    | Mozilla/Deepspeech function using the buffer data. | buffer                         |
+| dsFile      | Mozilla/Deepspeech function using the file path.   | file path                      |
+| dsStreaming | Mozilla/Deepspeech function using the microphone.  | emmiter(use new EventEmitter() |
+
+## Usage
+
+The best example of using our service is [react-deepspeech](https://github.com/teamthesol/react-DeepSpeech).
 
 ## How can I contribute to this project?
 
@@ -46,3 +108,7 @@ First, read the [our contribution guideline](CONTRIBUTING.md). if you have read 
 ## License
 
 [License](LICENSE)
+
+```
+
+```
