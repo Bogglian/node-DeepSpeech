@@ -1,13 +1,13 @@
 {
   "name": "node-deepspeech",
-  "version": "0.1.31",
+  "version": "0.1.4",
   "private": false,
   "description": "node package using the mozilla deepspeech",
   "main": "index.js",
   "scripts": {
     "file-demo": "node file-demo",
     "streaming-demo": "node streaming-demo",
-    "post": "node postinstall.js"
+    "pre": "node preinstall.js"
   },
   "repository": {
     "type": "git",
