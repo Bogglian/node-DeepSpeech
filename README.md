@@ -4,7 +4,7 @@
 
 [![NPM](https://nodei.co/npm/node-deepspeech.png)](https://npmjs.org/package/node-deepspeech)
 
-## What is the react-DeepSpeech?
+## What is the node-DeepSpeech?
 
 It started in Jan 23, 2019
 
