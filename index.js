@@ -1,28 +1,28 @@
-const EventEmitter = require("events");
-const streamServer = require("./sample_streaming");
+// const EventEmitter = require("events");
+// const streamServer = require("./sample_streaming");
 
 const dsb = require("./dsBuffer");
 const dsf = require("./dsFile");
-const dss = require("./dsStreaming");
+// const dss = require("./dsStreaming");
 
 function dsBuffer(buffer) {
-  if (!buffer) return 1;
+  if (buffer == null) return 1;
   dsb(buffer);
 }
 
 function dsFile(filepath) {
-  if (!filepath) return 1;
+  if (filepath == null) return 1;
   dsf(filepath);
 }
 
-function dsStreaming(emmiter) {
-  const myEmitter = emmiter || new EventEmitter();
-  const audioStreamCb = dss(myEmitter);
-  streamServer(audioStreamCb, myEmitter);
-}
+// function dsStreaming(emmiter) {
+//   const myEmitter = emmiter || new EventEmitter();
+//   const audioStreamCb = dss(myEmitter);
+//   streamServer(audioStreamCb, myEmitter);
+// }
 
 module.exports = {
   dsBuffer: dsBuffer,
-  dsFile: dsFile,
-  dsStreaming: dsStreaming
+  dsFile: dsFile
+  // dsStreaming: dsStreaming
 };

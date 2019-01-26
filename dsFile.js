@@ -8,7 +8,7 @@ const { Duplex } = require("stream");
 require("dotenv").config();
 
 module.exports = filePath => {
-  const AUDIO = filePath || "./audio/4507-16021-0012.wav";
+  const AUDIO = filePath;
 
   const modelsPath = process.env.DEEPSPEECH_MODEL_PATH || "./models";
   const MODEL = modelsPath + "/output_graph.pb";
@@ -107,14 +107,15 @@ module.exports = filePath => {
 
     // We take half of the buffer_size because buffer is a char* while
     // LocalDeepSpeechSTT() expected a short*
-    console.log(
-      model.stt(streamBuffer.slice(0, streamBuffer.length / 2), 16000)
-    );
+    stt = model.stt(streamBuffer.slice(0, streamBuffer.length / 2), 16000);
+
     const inferenceStop = process.hrtime(inferenceStart);
     console.error(
       "Inference took %ds for %ds audio file.",
       totalTime(inferenceStop),
       audioLength.toPrecision(4)
     );
+    console.log(stt);
+    return stt;
   });
 };

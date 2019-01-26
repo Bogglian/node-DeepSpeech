@@ -1,6 +1,6 @@
 {
   "name": "node-deepspeech",
-  "version": "0.1.4",
+  "version": "0.1.412",
   "private": false,
   "description": "node package using the mozilla deepspeech",
   "main": "index.js",
