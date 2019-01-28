@@ -14,6 +14,9 @@ this is component using node and morzilla/DeepSpeech.
 
 No one made a valid repository for DeepSpeech and we made it.
 
+## Demo
+![git history](assets/logDemo.mp4)
+
 ## 🏃‍♀️🏃‍♂️QuickStart
 
 1-1. If you want use in your project
