@@ -12,7 +12,7 @@ this is component using node and morzilla/DeepSpeech.
 
 ## 💡 Motivation
 
-No one made a valid repository for DeepSpeech and we made it.
+No one made a valid stt demo repository for DeepSpeech. so, we made it.
 
 ## Git history by January 28, 2019
 
