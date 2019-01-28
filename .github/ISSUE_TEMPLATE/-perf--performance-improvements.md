@@ -2,7 +2,7 @@
 name: "[Perf] Performance improvements"
 about: Performance improvements.
 title: ''
-labels: ''
+labels: Perf
 assignees: ''
 
 ---
