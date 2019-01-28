@@ -8,7 +8,7 @@
 
 It started in Jan 23, 2019
 
-this is component using node and morzilla/DeepSpeech.
+this is 'Node' function using node and morzilla/DeepSpeech.
 
 ## 💡 Motivation
 
