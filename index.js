@@ -12,7 +12,13 @@ function dsBuffer(buffer) {
 
 function dsFile(filepath) {
   if (filepath == null) return 1;
-  dsf(filepath);
+  return new Promise(function (resolve,reject){
+    dsf(filepath).then(function (data){
+      resolve(data);
+    }).catch(function (err){
+      reject(err)
+    })
+  })
 }
 
 // function dsStreaming(emmiter) {
