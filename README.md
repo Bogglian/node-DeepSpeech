@@ -54,9 +54,9 @@ $ npm run pre
 3. edit .env file follw:
 
 ```md
-Modify file name `.emv.sample's` to `.env`. this is use 'dotenv'.
+Modify file name '.emv.sample's' to '.env'. this is use 'dotenv'.
 
-Edit environment value 'DEEPSPEECH_MODEL_PATH' in `.env`. this is your 'models' path. 'models' is your trainint models. if you run `npm run pre`, edit like 'DEEPSPEECH_MODEL_PATH="./models'(this is only use in node-deepspeech).
+Edit environment value 'DEEPSPEECH_MODEL_PATH' in '.env'. this is your 'models' path. 'models' is your trainint models. if you run 'npm run pre', edit like 'DEEPSPEECH_MODEL_PATH="./models'(this is only use in node-deepspeech).
 
 but, if you don't want use 'dotenv', run `export DEEPSPEECH_MODEL_PATH="./your/models/path"` in terminal(bash, zsh, fish, etc).
 ```
