@@ -1,7 +1,8 @@
-const deepspeech = require("./index");
+const ds = require("./index");
+require("dotenv");
 
-// // using a sample file
-// deepspeech.dsFile();
+const yourDsFileFunction = async () => {
+  console.log(await ds.dsFile("./audio/4507-16021-0012.wav"));
+};
 
-// input your file path here
-deepspeech.dsFile("./audio/8455-210777-0068.wav");
+yourDsFileFunction();

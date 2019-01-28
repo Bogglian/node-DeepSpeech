@@ -9,16 +9,15 @@ require("dotenv").config();
 
 module.exports = filePath => {
   return new Promise(function(resolve, reject) {
-    var stt;
-
-    const AUDIO = filePath;
-
+    // Input your models path + properties
     const modelsPath = process.env.DEEPSPEECH_MODEL_PATH || "./models";
     const MODEL = modelsPath + "/output_graph.pb";
     const ALPHABET = modelsPath + "/alphabet.txt";
     const LM = modelsPath + "/lm.binary";
     const TRIE = modelsPath + "/trie";
-    // These constants control the beam search decoder
+
+    // Input your audio file path
+    const AUDIO = filePath;
 
     // Beam width used in the CTC decoder when building candidate transcriptions
     const BEAM_WIDTH = 500;
@@ -110,15 +109,24 @@ module.exports = filePath => {
 
       // We take half of the buffer_size because buffer is a char* while
       // LocalDeepSpeechSTT() expected a short*
-      stt = model.stt(streamBuffer.slice(0, streamBuffer.length / 2), 16000);
+      const stt = model.stt(
+        streamBuffer.slice(0, streamBuffer.length / 2),
+        16000
+      );
 
       const inferenceStop = process.hrtime(inferenceStart);
-      console.error("Inference took %ds for %ds audio file.", totalTime(inferenceStop), audioLength.toPrecision(4));
-      if(stt){
+      console.error(
+        "Inference took %ds for %ds audio file.",
+        totalTime(inferenceStop),
+        audioLength.toPrecision(4)
+      );
+
+      if (stt) {
         console.log(stt);
         resolve(stt);
       }
-      reject(new Error("fail stt"));
+
+      reject(new Error("fail file stt"));
     });
   });
 };

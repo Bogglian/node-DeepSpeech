@@ -7,18 +7,30 @@ const dsf = require("./dsFile");
 
 function dsBuffer(buffer) {
   if (buffer == null) return 1;
-  dsb(buffer);
+
+  return new Promise(function(resolve, reject) {
+    dsb(buffer)
+      .then(function(data) {
+        resolve(data);
+      })
+      .catch(function(err) {
+        reject(err);
+      });
+  });
 }
 
 function dsFile(filepath) {
   if (filepath == null) return 1;
-  return new Promise(function (resolve,reject){
-    dsf(filepath).then(function (data){
-      resolve(data);
-    }).catch(function (err){
-      reject(err)
-    })
-  })
+
+  return new Promise(function(resolve, reject) {
+    dsf(filepath)
+      .then(function(data) {
+        resolve(data);
+      })
+      .catch(function(err) {
+        reject(err);
+      });
+  });
 }
 
 // function dsStreaming(emmiter) {
