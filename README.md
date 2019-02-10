@@ -103,7 +103,7 @@ $ npm run streaing demo // or yarn streaming-demo
 
 ## Usage
 
-The best example of using our service is [react-deepspeech](https://github.com/teamthesol/react-DeepSpeech).
+The best example of using our service is [react-deepspeech](https://github.com/teamthesol/react-DeepSpeech) and [boggler](https://github.com/teamthesol/boggler).
 
 ## How can I contribute to this project?
 
